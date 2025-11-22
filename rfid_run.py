@@ -3,7 +3,7 @@ import base64
 import pyautogui
 import time
 ser = serial.Serial("COM7", 9600, timeout=50)  
-print("🔄 Waiting for RFID data...")
+print("Waiting for RFID data...")
 while True:
     line = ser.readline().decode("utf-8", errors="ignore").strip()
     print(f"Debug: Received line: {line}")
@@ -22,4 +22,5 @@ while True:
             print("Autofilled login details!")
         except Exception as e:
             print(f"Error processing data: {e}")
+
 
